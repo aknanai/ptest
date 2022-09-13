@@ -55,9 +55,14 @@ class Scanner:
         # Read the repsonse as a utf-8 string
         html = raw_response.decode("utf-8")
         A = re.findall('(?:href=")(.*?)"', str(html))
+        results=set()
         for t in A:
-            if "https" in t:
-                print(t)
+            if "https" in t and "google" not in t:
+                results.add(t)
+        #
+        for t in results:
+            print(t)
+        return results
 
 
 
