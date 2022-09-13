@@ -44,7 +44,7 @@ class Scanner:
         print(response.content)
 
     def google_search(self, url):
-        #url = 'https://google.com/search?q=aknanai'
+        #url = 'https://google.com/search?q=python'
         # Perform the request
         request = urllib.request.Request(url)
         # Set a normal User Agent header, otherwise Google will block the request.
